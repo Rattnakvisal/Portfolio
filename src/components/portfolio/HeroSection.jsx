@@ -171,16 +171,33 @@ export default function HeroSection({
                                     <div className="absolute inset-0 mx-auto h-44 w-44 rounded-full border border-white/[0.08] sm:h-48 sm:w-48" />
                                     <div className="hero-tech-orbit absolute left-1/2 top-1/2 h-[15.5rem] w-[15.5rem] -translate-x-1/2 -translate-y-1/2 sm:h-[17rem] sm:w-[17rem]">
                                         {cardTechIcons.map(
-                                            ({ angle, color, delay, icon, label }) => (
+                                            ({
+                                                angle,
+                                                color,
+                                                delay,
+                                                direction,
+                                                duration,
+                                                icon,
+                                                label,
+                                                radius,
+                                                size,
+                                            }) => (
                                                 <div
                                                     key={label}
-                                                    className="hero-tech-badge"
+                                                    className={`hero-tech-badge ${direction === 'reverse' ? 'hero-tech-badge-reverse' : ''}`}
                                                     style={{
                                                         '--angle': angle,
                                                         '--delay': delay,
+                                                        '--duration': duration,
+                                                        '--radius': radius,
+                                                        '--size': size,
                                                     }}
                                                     title={label}
                                                 >
+                                                    <span
+                                                        className="hero-tech-badge-glow"
+                                                        style={{ backgroundColor: color }}
+                                                    />
                                                     <div
                                                         className="hero-tech-badge-inner"
                                                         style={{ color }}
@@ -191,6 +208,9 @@ export default function HeroSection({
                                                         })}
                                                         <span className="sr-only">{label}</span>
                                                     </div>
+                                                    <span className="hero-tech-badge-label">
+                                                        {label}
+                                                    </span>
                                                 </div>
                                             ),
                                         )}
@@ -207,10 +227,6 @@ export default function HeroSection({
                                 <div className="mt-6 text-center">
                                     <p className="text-sm uppercase tracking-[0.32em] text-white/50">
                                         Full-stack developer
-                                    </p>
-                                    <p className="mt-3 text-base leading-relaxed text-white/80 sm:text-lg">
-                                        Creating polished interfaces and reliable backend flows with
-                                        PHP, Laravel, React, and SQL.
                                     </p>
                                 </div>
 

@@ -56,34 +56,88 @@ button,
 }
 
 .hero-tech-orbit {
-    animation: orbit 18s linear infinite;
-    transform-origin: center;
+    filter: drop-shadow(0 0 24px rgba(163, 230, 53, 0.08));
 }
 
 .hero-tech-badge {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(var(--angle)) translateY(-8.4rem);
+    transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
+    animation: techOrbit var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+.hero-tech-badge-reverse {
+    animation-name: techOrbitReverse;
+}
+
+.hero-tech-badge-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: calc(var(--size) + 0.8rem);
+    width: calc(var(--size) + 0.8rem);
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+    opacity: 0.22;
+    filter: blur(14px);
+    animation: techGlow 4.4s ease-in-out infinite;
+    animation-delay: var(--delay);
 }
 
 .hero-tech-badge-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: var(--size);
+    width: var(--size);
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 9999px;
-    background: rgba(7, 16, 8, 0.82);
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.14), transparent 55%),
+        rgba(7, 16, 8, 0.84);
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.28),
         0 0 22px rgba(163, 230, 53, 0.08);
     backdrop-filter: blur(14px);
     animation:
-        orbitReverse 18s linear infinite,
-        techPulse 3.8s ease-in-out infinite;
-    animation-delay: 0s, var(--delay);
+        techCounterOrbit var(--duration) linear infinite,
+        techPulse 3.8s ease-in-out infinite,
+        techDrift 5.2s ease-in-out infinite;
+    animation-delay: var(--delay), var(--delay), var(--delay);
+}
+
+.hero-tech-badge-reverse .hero-tech-badge-inner {
+    animation-name: techCounterOrbitReverse, techPulse, techDrift;
+}
+
+.hero-tech-badge-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+    background: rgba(7, 16, 8, 0.88);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translate(-50%, calc(-50% - 2.35rem));
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transition:
+        opacity 220ms ease,
+        transform 220ms ease;
+    pointer-events: none;
+}
+
+.hero-tech-badge:hover .hero-tech-badge-label {
+    opacity: 1;
+    transform: translate(-50%, calc(-50% - 2.75rem));
 }
 
 .floating-chip {
@@ -148,19 +202,77 @@ button,
     }
 }
 
+@keyframes techOrbit {
+    from {
+        transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
+    }
+    to {
+        transform: rotate(calc(var(--angle) + 360deg)) translateY(calc(var(--radius) * -1));
+    }
+}
+
+@keyframes techOrbitReverse {
+    from {
+        transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
+    }
+    to {
+        transform: rotate(calc(var(--angle) - 360deg)) translateY(calc(var(--radius) * -1));
+    }
+}
+
+@keyframes techCounterOrbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes techCounterOrbitReverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes techPulse {
     0%,
     100% {
-        transform: scale(1);
+        opacity: 0.92;
         box-shadow:
             0 10px 25px rgba(0, 0, 0, 0.28),
             0 0 18px rgba(163, 230, 53, 0.06);
     }
     50% {
-        transform: scale(1.08);
+        opacity: 1;
         box-shadow:
             0 14px 30px rgba(0, 0, 0, 0.32),
             0 0 26px rgba(163, 230, 53, 0.14);
+    }
+}
+
+@keyframes techGlow {
+    0%,
+    100% {
+        opacity: 0.16;
+        transform: translate(-50%, -50%) scale(0.88);
+    }
+    50% {
+        opacity: 0.32;
+        transform: translate(-50%, -50%) scale(1.14);
+    }
+}
+
+@keyframes techDrift {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -3px;
     }
 }
 
@@ -212,11 +324,6 @@ button,
     }
 
     .hero-tech-badge {
-        transform: rotate(var(--angle)) translateY(-7.5rem);
-    }
-
-    .hero-tech-badge-inner {
-        height: 2.25rem;
-        width: 2.25rem;
+        transform: rotate(var(--angle)) translateY(calc((var(--radius) - 0.9rem) * -1));
     }
 }
