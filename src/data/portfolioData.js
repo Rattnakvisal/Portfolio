@@ -17,7 +17,7 @@ import {
     SiReact,
     SiTailwindcss,
 } from 'react-icons/si';
-import profile from '../assets/ChatGPT Image Mar 30, 2026, 03_26_29 PM.png';
+import profile from '../assets/visal.png';
 import coffeeShop from '../assets/coffee-pic.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
 import library from '../assets/Library.png';
