@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: portfolio-gvmm
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
