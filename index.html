@@ -1,13 +1,42 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <script>
+        const isLocalDev =
+            window.location.hostname === 'localhost' ||
+            window.location.hostname === '127.0.0.1' ||
+            window.location.hostname.endsWith('.local');
+
+        const iconLink = document.querySelector('link[rel="icon"]');
+        const script = document.createElement('script');
+        script.type = 'module';
+
+        if (isLocalDev) {
+            script.src = '/src/main.jsx';
+        } else {
+            if (iconLink) {
+                iconLink.href = '/render-fallback/vite.svg';
+            }
+
+            const stylesheet = document.createElement('link');
+            stylesheet.rel = 'stylesheet';
+            stylesheet.href = '/render-fallback/assets/app.css';
+            document.head.appendChild(stylesheet);
+
+            script.src = '/render-fallback/assets/app.js';
+        }
+
+        document.body.appendChild(script);
+    </script>
+</body>
+
 </html>
