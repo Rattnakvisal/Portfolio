@@ -229,23 +229,53 @@ export const projects = [{
 ];
 
 export const skills = [{
-        category: 'Frontend',
-        items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap'],
+        category: 'Frontend Development',
+        items: [
+            'HTML5',
+            'CSS3',
+            'JavaScript (ES6+)',
+            'React.js',
+            'Tailwind CSS',
+            'Bootstrap'
+        ],
         icon: Palette,
     },
     {
-        category: 'Backend',
-        items: ['PHP', 'C#', 'Laravel', 'ASP.NET', 'REST API', 'Authentication', 'MVC Architecture'],
+        category: 'Backend Development',
+        items: [
+            'PHP',
+            'C#',
+            'Laravel Framework',
+            'ASP.NET Core',
+            'RESTful API',
+            'Authentication & Authorization',
+            'MVC Architecture'
+        ],
         icon: Code2,
     },
     {
-        category: 'Database',
-        items: ['MySQL', 'Microsoft SQL Server', 'MariaDB', 'Oracle', 'PDO', 'Database Design', 'SQL Optimization'],
+        category: 'Database Management',
+        items: [
+            'MySQL',
+            'Microsoft SQL Server',
+            'Oracle Database',
+            'PDO (PHP Data Objects)',
+            'Database Design',
+            'Query Optimization'
+        ],
         icon: Database,
     },
     {
         category: 'Tools & DevOps',
-        items: ['Git', 'GitHub', 'XAMPP', 'Composer', 'Vite', 'Docker'],
+        items: [
+            'Git & GitHub',
+            'XAMPP',
+            'Composer',
+            'Vite',
+            'Docker',
+            'Figma (UI/UX Design)',
+            'Postman (API Testing)'
+        ],
         icon: Rocket,
     },
 ];
