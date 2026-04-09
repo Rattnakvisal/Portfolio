@@ -224,7 +224,7 @@ export const projects = [{
         tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
-        color: '#ffaa00',
+        color: '#ff5500',
     },
 ];
 
@@ -235,12 +235,12 @@ export const skills = [{
     },
     {
         category: 'Backend',
-        items: ['PHP', 'Laravel', 'REST API', 'Authentication', 'MVC Architecture'],
+        items: ['PHP', 'C#', 'Laravel', 'ASP.NET', 'REST API', 'Authentication', 'MVC Architecture'],
         icon: Code2,
     },
     {
         category: 'Database',
-        items: ['MySQL', 'MariaDB', 'Oracle', 'PDO', 'Database Design', 'SQL Optimization'],
+        items: ['MySQL', 'Microsoft SQL Server', 'MariaDB', 'Oracle', 'PDO', 'Database Design', 'SQL Optimization'],
         icon: Database,
     },
     {
