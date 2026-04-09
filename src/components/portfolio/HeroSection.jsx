@@ -52,7 +52,7 @@ export default function HeroSection({
                 >
                     <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-lime-400/30 bg-lime-400/10 px-4 py-2 text-sm tracking-[0.24em] text-lime-300">
                         <Sparkles className="h-4 w-4" />
-                        WEB DEVELOPER
+                        SOFTWARE DEVELOPER
                     </div>
 
                     <div className="max-w-[39rem]">
@@ -76,9 +76,9 @@ export default function HeroSection({
                         </h1>
 
                         <p className="mt-7 max-w-[34rem] text-lg leading-relaxed text-gray-300/85 sm:text-[1rem] md:text-[1rem]">
-                            Full-stack developer building clean, high-impact web products with
-                            modern interfaces, thoughtful backend structure, and smooth user flow
-                            from first click to final action.
+                            Passionate software developer crafting modern web solutions with
+                            intuitive interfaces, scalable backend systems, and seamless user
+                            journeys from start to finish.
                         </p>
                     </div>
 
@@ -130,13 +130,6 @@ export default function HeroSection({
                         isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
                     }`}
                 >
-                    <div className="floating-chip-delayed pointer-events-none absolute -right-2 bottom-12 hidden rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 backdrop-blur-xl lg:block">
-                        <div className="text-[10px] uppercase tracking-[0.3em] text-cyan-300/80">
-                            Stack
-                        </div>
-                        <div className="mt-1 text-sm text-white/80">PHP / React / SQL</div>
-                    </div>
-
                     <div
                         className="hero-card-shell relative"
                         style={{
@@ -226,7 +219,7 @@ export default function HeroSection({
 
                                 <div className="mt-6 text-center">
                                     <p className="text-sm uppercase tracking-[0.32em] text-white/50">
-                                        Full-stack developer
+                                        Software developer
                                     </p>
                                 </div>
 

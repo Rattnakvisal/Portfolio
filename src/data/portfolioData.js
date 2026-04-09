@@ -1,9 +1,4 @@
-import {
-    Code2,
-    Database,
-    Palette,
-    Rocket
-} from 'lucide-react';
+import { Code2, Database, Palette, Rocket } from 'lucide-react';
 import {
     SiCss3,
     SiDocker,
@@ -24,26 +19,24 @@ import library from '../assets/Library.png';
 import resumePdf from '../assets/Chun Rattnakvisal.pdf';
 import school from '../assets/school.png';
 
-export {
-    profile,
-    resumePdf
-};
+export { profile, resumePdf };
 
-export const navigationItems = [{
+export const navigationItems = [
+    {
         label: 'HOME',
-        section: 'home'
+        section: 'home',
     },
     {
         label: 'WORK',
-        section: 'work'
+        section: 'work',
     },
     {
         label: 'SKILLS',
-        section: 'skills'
+        section: 'skills',
     },
     {
         label: 'CONTACT',
-        section: 'contact'
+        section: 'contact',
     },
 ];
 
@@ -51,17 +44,19 @@ export const heroPills = ['Modern UI systems', 'Responsive layouts', 'Clean back
 
 export const profileSkills = ['Laravel', 'React', 'MySQL', 'Tailwind CSS'];
 
-export const profileStats = [{
+export const profileStats = [
+    {
         value: '03',
-        label: 'Featured builds'
+        label: 'Featured builds',
     },
     {
         value: 'UI + API',
-        label: 'Focus area'
+        label: 'Focus area',
     },
 ];
 
-export const cardTechIcons = [{
+export const cardTechIcons = [
+    {
         label: 'HTML',
         icon: SiHtml5,
         color: '#ff7a18',
@@ -184,9 +179,11 @@ export const cardTechIcons = [{
     },
 ];
 
-export const projects = [{
+export const projects = [
+    {
         title: 'E-Commerce Shoes Platform',
-        description: 'Full-stack e-commerce system with product management, cart, checkout, order tracking, and role-based admin panel.',
+        description:
+            'Full-stack e-commerce system with product management, cart, checkout, order tracking, and role-based admin panel.',
         tech: ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Vite'],
         link: 'https://github.com/Rattnakvisal/E-commerce-shoes',
         image: ecommerceShoes,
@@ -194,7 +191,8 @@ export const projects = [{
     },
     {
         title: 'School Management System',
-        description: 'CRUD web app for managing students with validation, search/filter, and clean MVC structure using Laravel.',
+        description:
+            'CRUD web app for managing students with validation, search/filter, and clean MVC structure using Laravel.',
         tech: [
             'Laravel',
             'PHP',
@@ -212,7 +210,8 @@ export const projects = [{
     },
     {
         title: 'Library Management System',
-        description: 'Database-driven system for books, authors, borrowing/return, fines calculation, and reservation workflow.',
+        description:
+            'Database-driven system for books, authors, borrowing/return, fines calculation, and reservation workflow.',
         tech: ['ASP.NET', 'C#', 'Microsoft SQL Server', 'Jquery', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Library-Management-System',
         image: library,
@@ -220,7 +219,8 @@ export const projects = [{
     },
     {
         title: 'Coffee Shop',
-        description: 'A coffee shop website with menu, ordering system, and admin dashboard for managing products and orders.',
+        description:
+            'A coffee shop website with menu, ordering system, and admin dashboard for managing products and orders.',
         tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
@@ -228,16 +228,10 @@ export const projects = [{
     },
 ];
 
-export const skills = [{
+export const skills = [
+    {
         category: 'Frontend Development',
-        items: [
-            'HTML5',
-            'CSS3',
-            'JavaScript (ES6+)',
-            'React.js',
-            'Tailwind CSS',
-            'Bootstrap'
-        ],
+        items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS', 'Bootstrap'],
         icon: Palette,
     },
     {
@@ -248,8 +242,9 @@ export const skills = [{
             'Laravel Framework',
             'ASP.NET Core',
             'RESTful API',
-            'Authentication & Authorization',
-            'MVC Architecture'
+            'Authentication',
+            'Authorization',
+            'MVC Architecture',
         ],
         icon: Code2,
     },
@@ -261,21 +256,13 @@ export const skills = [{
             'Oracle Database',
             'PDO (PHP Data Objects)',
             'Database Design',
-            'Query Optimization'
+            'Query Optimization',
         ],
         icon: Database,
     },
     {
         category: 'Tools & DevOps',
-        items: [
-            'Git & GitHub',
-            'XAMPP',
-            'Composer',
-            'Vite',
-            'Docker',
-            'Figma (UI/UX Design)',
-            'Postman (API Testing)'
-        ],
+        items: ['Git & GitHub', 'XAMPP', 'Composer', 'Vite', 'Docker', 'Figma ', 'Postman '],
         icon: Rocket,
     },
 ];
