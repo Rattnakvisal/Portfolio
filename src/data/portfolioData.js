@@ -1,4 +1,9 @@
-import { Code2, Database, Palette, Rocket } from 'lucide-react';
+import {
+    Code2,
+    Database,
+    Palette,
+    Rocket
+} from 'lucide-react';
 import {
     SiCss3,
     SiDocker,
@@ -16,29 +21,47 @@ import profile from '../assets/ChatGPT Image Mar 30, 2026, 03_26_29 PM.png';
 import coffeeShop from '../assets/coffee-pic.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
 import library from '../assets/Library.png';
-import resumePdf from '../assets/Mr Chun Rattnakvisal.pdf';
+import resumePdf from '../assets/Chun Rattnakvisal.pdf';
 import school from '../assets/School.png';
 
-export { profile, resumePdf };
+export {
+    profile,
+    resumePdf
+};
 
-export const navigationItems = [
-    { label: 'HOME', section: 'home' },
-    { label: 'WORK', section: 'work' },
-    { label: 'SKILLS', section: 'skills' },
-    { label: 'CONTACT', section: 'contact' },
+export const navigationItems = [{
+        label: 'HOME',
+        section: 'home'
+    },
+    {
+        label: 'WORK',
+        section: 'work'
+    },
+    {
+        label: 'SKILLS',
+        section: 'skills'
+    },
+    {
+        label: 'CONTACT',
+        section: 'contact'
+    },
 ];
 
 export const heroPills = ['Modern UI systems', 'Responsive layouts', 'Clean backend logic'];
 
 export const profileSkills = ['Laravel', 'React', 'MySQL', 'Tailwind CSS'];
 
-export const profileStats = [
-    { value: '03', label: 'Featured builds' },
-    { value: 'UI + API', label: 'Focus area' },
+export const profileStats = [{
+        value: '03',
+        label: 'Featured builds'
+    },
+    {
+        value: 'UI + API',
+        label: 'Focus area'
+    },
 ];
 
-export const cardTechIcons = [
-    {
+export const cardTechIcons = [{
         label: 'HTML',
         icon: SiHtml5,
         color: '#ff7a18',
@@ -161,11 +184,9 @@ export const cardTechIcons = [
     },
 ];
 
-export const projects = [
-    {
+export const projects = [{
         title: 'E-Commerce Shoes Platform',
-        description:
-            'Full-stack e-commerce system with product management, cart, checkout, order tracking, and role-based admin panel.',
+        description: 'Full-stack e-commerce system with product management, cart, checkout, order tracking, and role-based admin panel.',
         tech: ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Vite'],
         link: 'https://github.com/Rattnakvisal/E-commerce-shoes',
         image: ecommerceShoes,
@@ -173,8 +194,7 @@ export const projects = [
     },
     {
         title: 'School Management System',
-        description:
-            'CRUD web app for managing students with validation, search/filter, and clean MVC structure using Laravel.',
+        description: 'CRUD web app for managing students with validation, search/filter, and clean MVC structure using Laravel.',
         tech: [
             'Laravel',
             'PHP',
@@ -192,8 +212,7 @@ export const projects = [
     },
     {
         title: 'Library Management System',
-        description:
-            'Database-driven system for books, authors, borrowing/return, fines calculation, and reservation workflow.',
+        description: 'Database-driven system for books, authors, borrowing/return, fines calculation, and reservation workflow.',
         tech: ['ASP.NET', 'C#', 'Microsoft SQL Server', 'Jquery', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Library-Management-System',
         image: library,
@@ -201,8 +220,7 @@ export const projects = [
     },
     {
         title: 'Coffee Shop',
-        description:
-            'A coffee shop website with menu, ordering system, and admin dashboard for managing products and orders.',
+        description: 'A coffee shop website with menu, ordering system, and admin dashboard for managing products and orders.',
         tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
@@ -210,8 +228,7 @@ export const projects = [
     },
 ];
 
-export const skills = [
-    {
+export const skills = [{
         category: 'Frontend',
         items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap'],
         icon: Palette,
