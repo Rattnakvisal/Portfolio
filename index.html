@@ -23,16 +23,12 @@
         if (isLocalDev) {
             script.src = '/src/main.jsx';
         } else {
-            if (iconLink) {
-                iconLink.href = '/render-fallback/vite.svg';
-            }
-
             const stylesheet = document.createElement('link');
             stylesheet.rel = 'stylesheet';
-            stylesheet.href = '/render-fallback/assets/app.css';
+            stylesheet.href = '/assets/app.css';
             document.head.appendChild(stylesheet);
 
-            script.src = '/render-fallback/assets/app.js';
+            script.src = '/assets/app.js';
         }
 
         document.body.appendChild(script);
