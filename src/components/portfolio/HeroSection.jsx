@@ -4,8 +4,6 @@ import {
     cardTechIcons,
     heroPills,
     profile,
-    profileSkills,
-    profileStats,
     resumePdf,
 } from '../../data/portfolioData';
 
@@ -46,9 +44,8 @@ export default function HeroSection({
 
             <div className="relative z-10 mx-auto grid min-h-[calc(100svh-5.5rem)] max-w-7xl items-center gap-10 px-5 pb-14 sm:px-6 sm:pb-16 lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[minmax(0,1.04fr)_minmax(420px,0.9fr)] lg:gap-12 lg:px-8 xl:gap-16">
                 <div
-                    className={`w-full max-w-[40rem] transition-all duration-1000 xl:max-w-[43rem] ${
-                        isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                    }`}
+                    className={`w-full max-w-[40rem] transition-all duration-1000 xl:max-w-[43rem] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                        }`}
                 >
                     <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-lime-400/30 bg-lime-400/10 px-4 py-2 text-sm tracking-[0.24em] text-lime-300">
                         <Sparkles className="h-4 w-4" />
@@ -75,10 +72,10 @@ export default function HeroSection({
                             MOMENTUM
                         </h1>
 
-                        <p className="mt-7 max-w-[34rem] text-lg leading-relaxed text-gray-300/85 sm:text-[1rem] md:text-[1rem]">
-                            Passionate software developer crafting modern web solutions with
-                            intuitive interfaces, scalable backend systems, and seamless user
-                            journeys from start to finish.
+                        <p className="mt-7 max-w-[38rem] text-lg font-medium leading-8 tracking-normal text-white/80 sm:text-xl md:text-[1.15rem] lg:leading-9">
+                            Software developer focused on building clean, responsive web
+                            applications with practical backend systems, thoughtful interfaces, and
+                            reliable database-driven features.
                         </p>
                     </div>
 
@@ -126,9 +123,8 @@ export default function HeroSection({
                 </div>
 
                 <aside
-                    className={`relative mx-auto w-full max-w-[460px] transition-all duration-1000 delay-200 lg:max-w-[480px] xl:max-w-[500px] ${
-                        isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-                    }`}
+                    className={`relative mx-auto w-full max-w-[460px] transition-all duration-1000 delay-200 lg:max-w-[480px] xl:max-w-[500px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+                        }`}
                 >
                     <div
                         className="hero-card-shell relative"
@@ -137,12 +133,12 @@ export default function HeroSection({
                             transition: 'transform 260ms ease-out',
                         }}
                     >
-                        <div className="absolute -inset-5 rounded-[34px] bg-gradient-to-br from-lime-400/[0.12] via-transparent to-cyan-400/[0.12] blur-3xl" />
+                        <div className="absolute -inset-5" />
 
-                        <div className="hero-card relative overflow-hidden rounded-[30px] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] px-5 py-6 shadow-[0_35px_90px_rgba(0,0,0,0.5)] backdrop-blur-2xl sm:px-6 sm:py-7">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(163,230,53,0.2),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.12),transparent_30%)]" />
+                        <div className="hero-card relative overflow-hidden sm:px-6 sm:py-7">
+                            <div className="absolute inset-0" />
                             <div className="hero-card-noise absolute inset-0 opacity-25" />
-                            <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/60 to-transparent" />
+                            <div className="absolute inset-x-6 top-0 h-px" />
 
                             <div className="relative z-10">
                                 <div className="flex items-center justify-between gap-4">
@@ -222,34 +218,6 @@ export default function HeroSection({
                                         Software developer
                                     </p>
                                 </div>
-
-                                <div className="mt-5 flex flex-wrap justify-center gap-2">
-                                    {profileSkills.map((item) => (
-                                        <span
-                                            key={item}
-                                            className="rounded-full border border-white/12 bg-white/[0.07] px-3 py-1 text-xs text-white/80"
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <div className="mt-5 grid grid-cols-2 gap-3">
-                                    {profileStats.map((stat) => (
-                                        <div
-                                            key={stat.label}
-                                            className="rounded-2xl border border-white/10 bg-black/20 p-3.5 text-left sm:p-4"
-                                        >
-                                            <div className="text-xl text-lime-300">
-                                                {stat.value}
-                                            </div>
-                                            <div className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">
-                                                {stat.label}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
                                 <div className="mt-5 flex items-center justify-center gap-3">
                                     <a
                                         href="https://github.com/Rattnakvisal"

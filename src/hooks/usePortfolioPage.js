@@ -80,6 +80,7 @@ export function usePortfolioPage() {
         const sectionMap = {
             home: 0,
             work: document.getElementById('projects-section')?.offsetTop - 80,
+            experience: document.getElementById('experience-section')?.offsetTop - 80,
             skills: document.getElementById('skills-section')?.offsetTop - 80,
             contact: document.getElementById('contact-section')?.offsetTop - 80,
         };

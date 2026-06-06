@@ -7,10 +7,15 @@ import {
     SiHtml5,
     SiJavascript,
     SiLaravel,
+    SiFlutter,
     SiMysql,
+    SiOpenjdk,
     SiPhp,
+    SiPostman,
     SiReact,
+    SiSpringboot,
     SiTailwindcss,
+    SiTypescript,
 } from 'react-icons/si';
 import profile from '../assets/visal.png';
 import coffeeShop from '../assets/coffee-pic.png';
@@ -31,6 +36,10 @@ export const navigationItems = [
         section: 'work',
     },
     {
+        label: 'EXPERIENCE',
+        section: 'experience',
+    },
+    {
         label: 'SKILLS',
         section: 'skills',
     },
@@ -41,19 +50,6 @@ export const navigationItems = [
 ];
 
 export const heroPills = ['Modern UI systems', 'Responsive layouts', 'Clean backend logic'];
-
-export const profileSkills = ['Laravel', 'React', 'MySQL', 'Tailwind CSS'];
-
-export const profileStats = [
-    {
-        value: '03',
-        label: 'Featured builds',
-    },
-    {
-        value: 'UI + API',
-        label: 'Focus area',
-    },
-];
 
 export const cardTechIcons = [
     {
@@ -177,6 +173,61 @@ export const cardTechIcons = [
         size: '2.6rem',
         direction: 'normal',
     },
+    {
+        label: 'Java',
+        icon: SiOpenjdk,
+        color: '#007396',
+        angle: '24deg',
+        delay: '4.7s',
+        radius: '7.2rem',
+        duration: '18.5s',
+        size: '2.5rem',
+        direction: 'reverse',
+    },
+    {
+        label: 'TypeScript',
+        icon: SiTypescript,
+        color: '#3178c6',
+        angle: '96deg',
+        delay: '5.4s',
+        radius: '7rem',
+        duration: '17.5s',
+        size: '2.45rem',
+        direction: 'reverse',
+    },
+    {
+        label: 'Spring Boot',
+        icon: SiSpringboot,
+        color: '#6db33f',
+        angle: '132deg',
+        delay: '5.75s',
+        radius: '8.55rem',
+        duration: '21.5s',
+        size: '2.5rem',
+        direction: 'normal',
+    },
+    {
+        label: 'Flutter',
+        icon: SiFlutter,
+        color: '#02569b',
+        angle: '168deg',
+        delay: '6.1s',
+        radius: '7.15rem',
+        duration: '16.5s',
+        size: '2.45rem',
+        direction: 'reverse',
+    },
+    {
+        label: 'Postman',
+        icon: SiPostman,
+        color: '#ff6c37',
+        angle: '276deg',
+        delay: '7.15s',
+        radius: '8.6rem',
+        duration: '20.5s',
+        size: '2.45rem',
+        direction: 'normal',
+    },
 ];
 
 export const projects = [
@@ -225,6 +276,50 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
         color: '#ff5500',
+    },
+];
+
+export const experiences = [
+    {
+        role: 'Software Developer Intern',
+        organization: 'ACLEDA University of Business and Education',
+        period: '2025 - 2026',
+        description:
+            'Contributed to responsive, database-driven web interfaces and backend features during a software development internship.',
+        highlights: [
+            'Developed ASP.NET Core MVC interfaces with clean data flows and responsive layouts.',
+            'Built interactive frontend features using JavaScript and jQuery.',
+            'Used Git and GitHub for version control and team collaboration.',
+            'Improved UI/UX details for better usability across key screens.',
+            'Integrated Microsoft SQL Server for backend data management.',
+        ],
+        stack: ['ASP.NET Core MVC', 'JavaScript', 'jQuery', 'SQL Server', 'GitHub'],
+    },
+    {
+        role: 'Backend & Database Developer',
+        organization: 'Academic and Personal Systems',
+        period: '2025 - 2026',
+        description:
+            'Created structured backend features for data-driven applications, with attention to validation, relationships, and maintainable MVC patterns.',
+        highlights: [
+            'Modeled students, books, orders, products, borrowing records, and user roles.',
+            'Worked with MySQL, Microsoft SQL Server, and ASP.NET/C# for database-backed systems.',
+            'Practiced API-style thinking through reusable controllers, services, and organized queries.',
+        ],
+        stack: ['ASP.NET', 'C#', 'SQL Server', 'MySQL', 'MVC'],
+    },
+    {
+        role: 'Frontend UI Developer',
+        organization: 'Portfolio and Product Interfaces',
+        period: '2023 - Present',
+        description:
+            'Designed responsive interfaces that keep project flows clear across desktop and mobile, using component-based UI patterns.',
+        highlights: [
+            'Built responsive layouts with React, JavaScript, Tailwind CSS, Bootstrap, HTML, and CSS.',
+            'Created portfolio, product listing, admin, checkout, and management screens.',
+            'Focused on readable hierarchy, smooth interactions, and reusable frontend components.',
+        ],
+        stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
     },
 ];
 
