@@ -9,6 +9,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body,
+#root {
+    min-height: 100vh;
+    margin: 0;
+    background: #000;
+}
+
 h1,
 h2,
 h3,
@@ -31,21 +38,6 @@ button,
     transform-style: preserve-3d;
 }
 
-.hero-card {
-    animation: cardGlow 6s ease-in-out infinite;
-}
-
-.hero-card-noise {
-    background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.14),
-        transparent 28%,
-        transparent 72%,
-        rgba(255, 255, 255, 0.08)
-    );
-    mix-blend-mode: screen;
-}
-
 .hero-orbit-ring {
     animation: pulseRing 4s ease-in-out infinite;
 }
@@ -56,7 +48,7 @@ button,
 }
 
 .hero-tech-orbit {
-    filter: drop-shadow(0 0 24px rgba(163, 230, 53, 0.08));
+    filter: drop-shadow(0 0 28px rgba(163, 230, 53, 0.12));
 }
 
 .hero-tech-badge {
@@ -76,12 +68,12 @@ button,
     position: absolute;
     top: 50%;
     left: 50%;
-    height: calc(var(--size) + 0.8rem);
-    width: calc(var(--size) + 0.8rem);
+    height: calc(var(--size) + 1rem);
+    width: calc(var(--size) + 1rem);
     border-radius: 9999px;
     transform: translate(-50%, -50%);
-    opacity: 0.22;
-    filter: blur(14px);
+    opacity: 0.3;
+    filter: blur(16px);
     animation: techGlow 4.4s ease-in-out infinite;
     animation-delay: var(--delay);
 }
@@ -93,20 +85,28 @@ button,
     justify-content: center;
     height: var(--size);
     width: var(--size);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 9999px;
+    border: 1px solid color-mix(in srgb, currentColor 42%, rgba(255, 255, 255, 0.14));
+    border-radius: 1rem;
     background:
-        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.14), transparent 55%),
-        rgba(7, 16, 8, 0.84);
+        radial-gradient(circle at 30% 20%, color-mix(in srgb, currentColor 24%, transparent), transparent 56%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.035)),
+        rgba(5, 12, 8, 0.72);
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.28),
-        0 0 22px rgba(163, 230, 53, 0.08);
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        0 12px 28px rgba(0, 0, 0, 0.3),
+        0 0 22px color-mix(in srgb, currentColor 24%, transparent);
     backdrop-filter: blur(14px);
     animation:
         techCounterOrbit var(--duration) linear infinite,
         techPulse 3.8s ease-in-out infinite,
         techDrift 5.2s ease-in-out infinite;
     animation-delay: var(--delay), var(--delay), var(--delay);
+}
+
+.hero-tech-badge-inner svg {
+    height: 54%;
+    width: 54%;
+    filter: drop-shadow(0 0 10px color-mix(in srgb, currentColor 54%, transparent));
 }
 
 .hero-tech-badge-reverse .hero-tech-badge-inner {
@@ -149,26 +149,14 @@ button,
 }
 
 @keyframes gradient {
+
     0%,
     100% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
-    }
-}
-
-@keyframes cardGlow {
-    0%,
-    100% {
-        box-shadow:
-            0 35px 90px rgba(0, 0, 0, 0.5),
-            0 0 0 rgba(163, 230, 53, 0.12);
-    }
-    50% {
-        box-shadow:
-            0 40px 110px rgba(0, 0, 0, 0.58),
-            0 0 32px rgba(163, 230, 53, 0.18);
     }
 }
 
@@ -176,17 +164,20 @@ button,
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
 @keyframes pulseRing {
+
     0%,
     100% {
         transform: scale(1);
         opacity: 0.65;
     }
+
     50% {
         transform: scale(1.05);
         opacity: 1;
@@ -197,6 +188,7 @@ button,
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
@@ -206,6 +198,7 @@ button,
     from {
         transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
     }
+
     to {
         transform: rotate(calc(var(--angle) + 360deg)) translateY(calc(var(--radius) * -1));
     }
@@ -215,6 +208,7 @@ button,
     from {
         transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
     }
+
     to {
         transform: rotate(calc(var(--angle) - 360deg)) translateY(calc(var(--radius) * -1));
     }
@@ -224,6 +218,7 @@ button,
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
@@ -233,54 +228,65 @@ button,
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
 @keyframes techPulse {
+
     0%,
     100% {
-        opacity: 0.92;
+        opacity: 0.96;
         box-shadow:
-            0 10px 25px rgba(0, 0, 0, 0.28),
-            0 0 18px rgba(163, 230, 53, 0.06);
+            inset 0 1px 0 rgba(255, 255, 255, 0.18),
+            0 12px 28px rgba(0, 0, 0, 0.3),
+            0 0 22px color-mix(in srgb, currentColor 24%, transparent);
     }
+
     50% {
         opacity: 1;
         box-shadow:
-            0 14px 30px rgba(0, 0, 0, 0.32),
-            0 0 26px rgba(163, 230, 53, 0.14);
+            inset 0 1px 0 rgba(255, 255, 255, 0.22),
+            0 16px 34px rgba(0, 0, 0, 0.34),
+            0 0 34px color-mix(in srgb, currentColor 38%, transparent);
     }
 }
 
 @keyframes techGlow {
+
     0%,
     100% {
-        opacity: 0.16;
-        transform: translate(-50%, -50%) scale(0.88);
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(0.9);
     }
+
     50% {
-        opacity: 0.32;
+        opacity: 0.38;
         transform: translate(-50%, -50%) scale(1.14);
     }
 }
 
 @keyframes techDrift {
+
     0%,
     100% {
         translate: 0 0;
     }
+
     50% {
         translate: 0 -3px;
     }
 }
 
 @keyframes floatSoft {
+
     0%,
     100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -312,6 +318,7 @@ button,
         transform: translateY(12px) scale(0.985);
         opacity: 0;
     }
+
     to {
         transform: translateY(0) scale(1);
         opacity: 1;

@@ -15,7 +15,7 @@ export default function HeroSection({
     spotlightTransform,
 }) {
     return (
-        <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,#14351d_0%,#071008_38%,#000_72%)] pt-[6.5rem] sm:pt-[7rem]">
+        <section className="relative min-h-screen overflow-hidden bg-black pt-[6.5rem] sm:pt-[7rem]">
             <div className="absolute inset-0 opacity-30">
                 <div className="hero-grid absolute inset-0" />
                 <div
@@ -115,10 +115,8 @@ export default function HeroSection({
                     <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-white/60">
                         <div className="flex items-center gap-3">
                             <span className="h-2 w-2 rounded-full bg-lime-400 shadow-[0_0_20px_rgba(163,230,53,0.9)]" />
-                            Available for internship and freelance
+                            Available for full-time jobs, internships, and freelance work
                         </div>
-                        <span className="hidden h-px w-8 bg-white/15 md:block" />
-                        <span>React, Laravel, PHP, ASP.NET, SQL</span>
                     </div>
                 </div>
 
@@ -133,13 +131,7 @@ export default function HeroSection({
                             transition: 'transform 260ms ease-out',
                         }}
                     >
-                        <div className="absolute -inset-5" />
-
-                        <div className="hero-card relative overflow-hidden sm:px-6 sm:py-7">
-                            <div className="absolute inset-0" />
-                            <div className="hero-card-noise absolute inset-0 opacity-25" />
-                            <div className="absolute inset-x-6 top-0 h-px" />
-
+                        <div className="relative sm:px-6 sm:py-7">
                             <div className="relative z-10">
                                 <div className="flex items-center justify-between gap-4">
                                     <div>

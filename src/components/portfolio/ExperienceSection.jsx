@@ -5,7 +5,7 @@ export default function ExperienceSection({ visibleElements }) {
     return (
         <section
             id="experience-section"
-            className="relative overflow-hidden bg-zinc-950 py-32 text-white"
+            className="relative overflow-hidden bg-black py-32 text-white"
         >
             <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/10 lg:block" />
             <div className="absolute top-20 left-0 h-72 w-72 rounded-full bg-lime-400/10 blur-3xl" />
@@ -48,7 +48,7 @@ export default function ExperienceSection({ visibleElements }) {
                             }`}
                             style={{ transitionDelay: `${index * 140}ms` }}
                         >
-                            <div className="absolute -left-2 top-8 hidden h-4 w-4 rounded-full border-4 border-zinc-950 bg-lime-400 shadow-[0_0_0_6px_rgba(163,230,53,0.14)] lg:block" />
+                            <div className="absolute -left-2 top-8 hidden h-4 w-4 rounded-full border-4 border-black bg-lime-400 shadow-[0_0_0_6px_rgba(163,230,53,0.14)] lg:block" />
 
                             <div>
                                 <div className="mb-5 inline-flex items-center gap-2 bg-lime-400 px-3 py-1 text-xs font-black tracking-wider text-black">

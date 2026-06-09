@@ -5,7 +5,7 @@ export default function ProjectsSection({ onPreviewProject, visibleElements }) {
     return (
         <section
             id="projects-section"
-            className="relative overflow-hidden bg-white py-32 text-black"
+            className="relative overflow-hidden bg-black py-32 text-white"
         >
             <div className="absolute top-0 right-0 h-full w-1/3 bg-lime-400/5" />
             <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-gradient-to-tr from-lime-400/10 to-transparent blur-3xl" />
@@ -13,7 +13,7 @@ export default function ProjectsSection({ onPreviewProject, visibleElements }) {
             <div className="relative z-10 mx-auto max-w-7xl px-6">
                 <div className="mb-20" data-animate-id="projects-title">
                     <div
-                        className={`mb-6 inline-block border-4 border-black px-6 py-3 text-lg font-black tracking-wider transition-all duration-1000 ${
+                        className={`mb-6 inline-block border-4 border-lime-400 px-6 py-3 text-lg font-black tracking-wider text-lime-300 transition-all duration-1000 ${
                             visibleElements.has('projects-title')
                                 ? 'rotate-[2deg] opacity-100'
                                 : 'rotate-[12deg] opacity-0'
