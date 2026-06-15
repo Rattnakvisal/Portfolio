@@ -1,6 +1,7 @@
 import './app.css';
 import ContactSection from './components/portfolio/ContactSection';
 import CustomCursor from './components/portfolio/CustomCursor';
+import EducationSection from './components/portfolio/EducationSection';
 import ExperienceSection from './components/portfolio/ExperienceSection';
 import HeroSection from './components/portfolio/HeroSection';
 import Navbar from './components/portfolio/Navbar';
@@ -51,6 +52,7 @@ export default function App() {
                 onPreviewProject={setSelectedProject}
                 visibleElements={visibleElements}
             />
+            <EducationSection visibleElements={visibleElements} />
             <ExperienceSection visibleElements={visibleElements} />
             <SkillsSection visibleElements={visibleElements} />
             <ContactSection visibleElements={visibleElements} />

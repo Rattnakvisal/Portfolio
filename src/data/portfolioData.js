@@ -16,11 +16,12 @@ import {
 import profile from '../assets/visal.png';
 import coffeeShop from '../assets/coffee-pic.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
+import educationPhoto from '../assets/Me.jpg';
 import library from '../assets/Library.png';
 import resumePdf from '../assets/Chun Rattnakvisal.pdf';
 import school from '../assets/school.png';
 
-export { profile, resumePdf };
+export { educationPhoto, profile, resumePdf };
 
 export const navigationItems = [
     {
@@ -34,6 +35,10 @@ export const navigationItems = [
     {
         label: 'EXPERIENCE',
         section: 'experience',
+    },
+    {
+        label: 'EDUCATION',
+        section: 'education',
     },
     {
         label: 'SKILLS',
@@ -228,6 +233,28 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
         color: '#ff5500',
+    },
+];
+
+export const education = [
+    {
+        school: 'Chea Sim Kompong Thmar High School',
+        period: '2022 - 2023',
+        highlights: ['High School graduation 2023'],
+    },
+    {
+        school: 'ICT Professional Training Center',
+        period: '2024 - 2025',
+        highlights: [
+            'UX/UI Designer | Jan 2025 - May 2025',
+            'Backend Developer | Jan 2025 - May 2025',
+            'Frontend Developer | Aug 2024 - Dec 2024',
+        ],
+    },
+    {
+        school: 'ACLEDA University of Business',
+        period: '2023 - Present',
+        highlights: ['Bachelor of Business Information Technology'],
     },
 ];
 

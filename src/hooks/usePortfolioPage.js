@@ -81,6 +81,7 @@ export function usePortfolioPage() {
             home: 0,
             work: document.getElementById('projects-section')?.offsetTop - 80,
             experience: document.getElementById('experience-section')?.offsetTop - 80,
+            education: document.getElementById('education-section')?.offsetTop - 80,
             skills: document.getElementById('skills-section')?.offsetTop - 80,
             contact: document.getElementById('contact-section')?.offsetTop - 80,
         };
