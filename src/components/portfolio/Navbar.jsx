@@ -22,7 +22,7 @@ export default function Navbar({ activeSection, isLoaded, onNavigate }) {
                             <button
                                 key={item.label}
                                 onClick={() => onNavigate(item.section)}
-                                className={`group relative inline-flex h-9 shrink-0 items-center justify-center rounded-full px-2 text-[10px] font-bold leading-none tracking-wider transition-all duration-300 sm:h-10 sm:px-3 sm:text-xs md:min-w-[74px] md:px-3.5 md:text-sm ${
+                                className={`group relative inline-flex h-9 shrink-0 items-center justify-center rounded-full px-2 text-[11px] leading-tight tracking-wide transition-all duration-300 sm:h-10 sm:px-3 sm:text-sm md:min-w-[74px] md:px-3.5 md:text-base ${
                                     activeSection === item.section
                                         ? 'bg-white/[0.06] text-lime-300'
                                         : 'text-white hover:bg-white/[0.04] hover:text-lime-400'
@@ -32,9 +32,7 @@ export default function Navbar({ activeSection, isLoaded, onNavigate }) {
                                 {item.label}
                                 <span
                                     className={`absolute bottom-1.5 left-1/2 h-0.5 -translate-x-1/2 bg-lime-400 transition-all duration-300 ${
-                                        activeSection === item.section
-                                            ? 'w-8'
-                                            : 'w-0 group-hover:w-7'
+                                        activeSection === item.section ? 'w-8' : 'w-0 group-hover:w-7'
                                     }`}
                                 />
                             </button>

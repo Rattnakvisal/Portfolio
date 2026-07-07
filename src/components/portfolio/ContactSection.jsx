@@ -2,10 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function ContactSection({ visibleElements }) {
     return (
-        <section
-            id="contact-section"
-            className="relative overflow-hidden bg-black py-32 text-white"
-        >
+        <section id="contact-section" className="relative overflow-hidden bg-black py-32 text-white">
             <div className="absolute inset-0 opacity-10">
                 <div
                     className="absolute top-0 left-0 h-full w-full"
@@ -19,10 +16,9 @@ export default function ContactSection({ visibleElements }) {
             <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
                 <h2
                     data-animate-id="contact-title"
-                    className={`mb-8 text-7xl leading-none tracking-tighter transition-all duration-1000 md:text-8xl ${visibleElements.has('contact-title')
-                            ? 'scale-100 opacity-100'
-                            : 'scale-90 opacity-0'
-                        }`}
+                    className={`mb-8 text-7xl leading-none tracking-tighter transition-all duration-1000 md:text-8xl ${
+                        visibleElements.has('contact-title') ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+                    }`}
                 >
                     LET'S BUILD
                     <br />
@@ -33,20 +29,22 @@ export default function ContactSection({ visibleElements }) {
 
                 <p
                     data-animate-id="contact-subtitle"
-                    className={`mb-12 text-xl font-medium transition-all duration-1000 delay-300 md:text-2xl ${visibleElements.has('contact-subtitle')
+                    className={`mb-12 text-xl leading-relaxed transition-all duration-1000 delay-300 md:text-2xl text-white/90 ${
+                        visibleElements.has('contact-subtitle')
                             ? 'translate-y-0 opacity-100'
                             : 'translate-y-10 opacity-0'
-                        }`}
+                    }`}
                 >
                     Open to freelance projects, collaborations, and full-time opportunities
                 </p>
 
                 <div
                     data-animate-id="contact-buttons"
-                    className={`mb-12 flex flex-wrap justify-center gap-6 transition-all duration-1000 delay-500 ${visibleElements.has('contact-buttons')
+                    className={`mb-12 flex flex-wrap justify-center gap-6 transition-all duration-1000 delay-500 ${
+                        visibleElements.has('contact-buttons')
                             ? 'translate-y-0 opacity-100'
                             : 'translate-y-10 opacity-0'
-                        }`}
+                    }`}
                 >
                     <a
                         href="mailto:your.rattnakvisalchun@gmail.com"

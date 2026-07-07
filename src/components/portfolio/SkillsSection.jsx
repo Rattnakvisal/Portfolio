@@ -14,18 +14,16 @@ export default function SkillsSection({ visibleElements }) {
             <div className="relative z-10 mx-auto max-w-7xl px-6">
                 <div className="mb-20 text-center" data-animate-id="skills-title">
                     <h2
-                        className={`mb-4 text-6xl leading-none tracking-tighter transition-all duration-1000 md:text-7xl ${visibleElements.has('skills-title')
-                                ? 'scale-100 opacity-100'
-                                : 'scale-95 opacity-0'
-                            }`}
+                        className={`mb-4 text-6xl leading-none tracking-tighter transition-all duration-1000 md:text-7xl ${
+                            visibleElements.has('skills-title') ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+                        }`}
                     >
                         TECH STACK
                     </h2>
                     <div
-                        className={`mx-auto h-1 bg-lime-400 transition-all duration-1000 delay-300 ${visibleElements.has('skills-title')
-                                ? 'w-32 opacity-100'
-                                : 'w-0 opacity-0'
-                            }`}
+                        className={`mx-auto h-1 bg-lime-400 transition-all duration-1000 delay-300 ${
+                            visibleElements.has('skills-title') ? 'w-32 opacity-100' : 'w-0 opacity-0'
+                        }`}
                     />
                 </div>
 
@@ -37,25 +35,22 @@ export default function SkillsSection({ visibleElements }) {
                             <div
                                 key={skillGroup.category}
                                 data-animate-id={`skill-${index}`}
-                                className={`group border-2 border-white/10 bg-white/5 p-8 transition-all duration-700 hover:border-lime-400 hover:bg-lime-400/5 ${visibleElements.has(`skill-${index}`)
+                                className={`group border-2 border-white/10 bg-white/5 p-8 transition-all duration-700 hover:border-lime-400 hover:bg-lime-400/5 ${
+                                    visibleElements.has(`skill-${index}`)
                                         ? 'translate-x-0 opacity-100'
                                         : index % 2 === 0
-                                            ? '-translate-x-20 opacity-0'
-                                            : 'translate-x-20 opacity-0'
-                                    }`}
+                                          ? '-translate-x-20 opacity-0'
+                                          : 'translate-x-20 opacity-0'
+                                }`}
                                 style={{ transitionDelay: `${index * 100}ms` }}
                             >
                                 <Icon className="mb-6 h-10 w-10 text-lime-400 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-                                <h3 className="mb-6 text-2xl tracking-tight">
-                                    {skillGroup.category}
-                                </h3>
+                                <h3 className="mb-6 text-2xl tracking-tight">{skillGroup.category}</h3>
                                 <div className="space-y-2">
-                                    {skillGroup.items.map((skill) => (
+                                    {skillGroup.items.map(skill => (
                                         <div key={skill} className="flex items-center gap-2">
                                             <div className="h-1 w-1 rounded-full bg-lime-400" />
-                                            <span className="font-medium text-gray-400">
-                                                {skill}
-                                            </span>
+                                            <span className="text-gray-300 text-sm">{skill}</span>
                                         </div>
                                     ))}
                                 </div>

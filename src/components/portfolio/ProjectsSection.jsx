@@ -3,10 +3,7 @@ import { projects } from '../../data/portfolioData';
 
 export default function ProjectsSection({ onPreviewProject, visibleElements }) {
     return (
-        <section
-            id="projects-section"
-            className="relative overflow-hidden bg-black py-32 text-white"
-        >
+        <section id="projects-section" className="relative overflow-hidden bg-black py-32 text-white">
             <div className="absolute top-0 right-0 h-full w-1/3 bg-lime-400/5" />
             <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-gradient-to-tr from-lime-400/10 to-transparent blur-3xl" />
 
@@ -63,15 +60,13 @@ export default function ProjectsSection({ onPreviewProject, visibleElements }) {
                                     />
                                 </div>
 
-                                <p className="mb-6 leading-relaxed text-gray-400">
-                                    {project.description}
-                                </p>
+                                <p className="mb-6 leading-relaxed text-gray-300 text-base">{project.description}</p>
 
                                 <div className="flex flex-wrap gap-2">
-                                    {project.tech.map((tech) => (
+                                    {project.tech.map(tech => (
                                         <span
                                             key={tech}
-                                            className="border-2 px-3 py-1 text-xs font-bold tracking-wider"
+                                            className="border-2 px-3 py-1 text-xs tracking-wider"
                                             style={{
                                                 borderColor: project.color,
                                                 color: project.color,
@@ -85,16 +80,9 @@ export default function ProjectsSection({ onPreviewProject, visibleElements }) {
                                 <div className="mt-6 flex gap-3">
                                     <button
                                         onClick={() => window.open(project.link, '_blank')}
-                                        className="rounded-md bg-white px-4 py-2 font-bold text-black transition hover:opacity-90"
+                                        className="rounded-md bg-white px-4 py-2 text-sm font-600 text-black transition hover:opacity-90"
                                     >
                                         Visit
-                                    </button>
-
-                                    <button
-                                        onClick={() => onPreviewProject(project)}
-                                        className="rounded-md border-2 border-white px-4 py-2 font-bold text-white transition hover:bg-white/10"
-                                    >
-                                        Preview
                                     </button>
                                 </div>
                             </div>

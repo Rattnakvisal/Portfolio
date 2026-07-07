@@ -3,10 +3,7 @@ import { experiences } from '../../data/portfolioData';
 
 export default function ExperienceSection({ visibleElements }) {
     return (
-        <section
-            id="experience-section"
-            className="relative overflow-hidden bg-black py-32 text-white"
-        >
+        <section id="experience-section" className="relative overflow-hidden bg-black py-32 text-white">
             <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/10 lg:block" />
             <div className="absolute top-20 left-0 h-72 w-72 rounded-full bg-lime-400/10 blur-3xl" />
             <div className="absolute right-0 bottom-10 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
@@ -55,34 +52,30 @@ export default function ExperienceSection({ visibleElements }) {
                                     <CalendarDays className="h-4 w-4" />
                                     {experience.period}
                                 </div>
-                                <h3 className="text-3xl tracking-tight md:text-4xl">
-                                    {experience.role}
-                                </h3>
-                                <p className="mt-2 text-sm font-bold uppercase tracking-[0.22em] text-lime-300">
+                                <h3 className="text-3xl tracking-tight md:text-4xl">{experience.role}</h3>
+                                <p className="mt-2 text-sm uppercase tracking-[0.22em] text-lime-300">
                                     {experience.organization}
                                 </p>
-                                <p className="mt-6 max-w-xl leading-relaxed text-gray-400">
+                                <p className="mt-6 max-w-xl leading-relaxed text-gray-300 text-base">
                                     {experience.description}
                                 </p>
                             </div>
 
                             <div className="flex flex-col justify-between gap-6">
                                 <div className="space-y-3">
-                                    {experience.highlights.map((highlight) => (
+                                    {experience.highlights.map(highlight => (
                                         <div key={highlight} className="flex gap-3">
                                             <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-400" />
-                                            <p className="font-medium leading-relaxed text-gray-300">
-                                                {highlight}
-                                            </p>
+                                            <p className="leading-relaxed text-gray-300 text-base">{highlight}</p>
                                         </div>
                                     ))}
                                 </div>
 
                                 <div className="flex flex-wrap gap-2">
-                                    {experience.stack.map((item) => (
+                                    {experience.stack.map(item => (
                                         <span
                                             key={item}
-                                            className="border border-white/15 px-3 py-1 text-xs font-bold tracking-wider text-lime-200"
+                                            className="border border-white/15 px-3 py-1 text-xs tracking-wider text-lime-200"
                                         >
                                             {item}
                                         </span>

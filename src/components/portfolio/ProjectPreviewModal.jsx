@@ -17,7 +17,7 @@ export default function ProjectPreviewModal({ closeBtnRef, project, onClose }) {
 
             <div
                 className="modal-enter relative z-50 mx-auto w-full max-w-4xl overflow-hidden rounded-2xl bg-white text-black shadow-2xl transition-all"
-                onClick={(event) => event.stopPropagation()}
+                onClick={event => event.stopPropagation()}
                 style={{ maxWidth: 1100 }}
             >
                 <div className="flex justify-end p-4">
@@ -35,10 +35,7 @@ export default function ProjectPreviewModal({ closeBtnRef, project, onClose }) {
                     <h3 id="preview-title" className="mb-4 text-2xl tracking-tight">
                         {project.title}
                     </h3>
-                    <div
-                        className="mb-4 w-full overflow-hidden rounded-md bg-gray-100"
-                        style={{ maxHeight: '60vh' }}
-                    >
+                    <div className="mb-4 w-full overflow-hidden rounded-md bg-gray-100" style={{ maxHeight: '60vh' }}>
                         <img
                             src={project.image}
                             alt={project.title}
@@ -47,14 +44,11 @@ export default function ProjectPreviewModal({ closeBtnRef, project, onClose }) {
                         />
                     </div>
 
-                    <p className="mb-4 text-gray-700">{project.description}</p>
+                    <p className="mb-4 text-gray-600 leading-relaxed">{project.description}</p>
 
                     <div className="mb-6 flex flex-wrap gap-2">
-                        {project.tech.map((tech) => (
-                            <span
-                                key={tech}
-                                className="rounded border px-3 py-1 text-sm text-gray-800"
-                            >
+                        {project.tech.map(tech => (
+                            <span key={tech} className="rounded border px-3 py-1 text-sm text-gray-800">
                                 {tech}
                             </span>
                         ))}
@@ -65,13 +59,13 @@ export default function ProjectPreviewModal({ closeBtnRef, project, onClose }) {
                             href={project.link}
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-md bg-lime-400 px-4 py-2 font-bold text-black"
+                            className="rounded-md bg-lime-400 px-4 py-2 text-sm font-600 text-black"
                         >
                             Open Project
                         </a>
                         <button
                             onClick={onClose}
-                            className="rounded-md border-2 border-black px-4 py-2 font-bold text-black"
+                            className="rounded-md border-2 border-black px-4 py-2 text-sm font-600 text-black"
                         >
                             Close
                         </button>

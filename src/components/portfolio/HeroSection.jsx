@@ -1,19 +1,8 @@
 import { createElement } from 'react';
 import { ArrowRight, Download, Github, Linkedin, Sparkles } from 'lucide-react';
-import {
-    cardTechIcons,
-    heroPills,
-    profile,
-    resumePdf,
-} from '../../data/portfolioData';
+import { cardTechIcons, heroPills, profile, resumePdf } from '../../data/portfolioData';
 
-export default function HeroSection({
-    heroCardTransform,
-    isLoaded,
-    onViewProjects,
-    scrollY,
-    spotlightTransform,
-}) {
+export default function HeroSection({ heroCardTransform, isLoaded, onViewProjects, scrollY, spotlightTransform }) {
     return (
         <section className="relative min-h-screen overflow-hidden bg-black pt-[6.5rem] sm:pt-[7rem]">
             <div className="absolute inset-0 opacity-30">
@@ -44,8 +33,9 @@ export default function HeroSection({
 
             <div className="relative z-10 mx-auto grid min-h-[calc(100svh-5.5rem)] max-w-7xl items-center gap-10 px-5 pb-14 sm:px-6 sm:pb-16 lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[minmax(0,1.04fr)_minmax(420px,0.9fr)] lg:gap-12 lg:px-8 xl:gap-16">
                 <div
-                    className={`w-full max-w-[40rem] transition-all duration-1000 xl:max-w-[43rem] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                        }`}
+                    className={`w-full max-w-[40rem] transition-all duration-1000 xl:max-w-[43rem] ${
+                        isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                     <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-lime-400/30 bg-lime-400/10 px-4 py-2 text-sm tracking-[0.24em] text-lime-300">
                         <Sparkles className="h-4 w-4" />
@@ -53,9 +43,7 @@ export default function HeroSection({
                     </div>
 
                     <div className="max-w-[39rem]">
-                        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-white/50">
-                            Portfolio 2026
-                        </p>
+                        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-white/50">Portfolio 2026</p>
                         <h1 className="text-[3.5rem] leading-[0.88] tracking-tighter sm:text-[4rem] md:text-[5rem] lg:text-[4.5rem] xl:text-[5rem]">
                             SHAPING
                             <br />
@@ -72,18 +60,17 @@ export default function HeroSection({
                             MOMENTUM
                         </h1>
 
-                        <p className="mt-7 max-w-[38rem] text-lg font-medium leading-8 tracking-normal text-white/80 sm:text-xl md:text-[1.15rem] lg:leading-9">
-                            Software developer focused on building clean, responsive web
-                            applications with practical backend systems, thoughtful interfaces, and
-                            reliable database-driven features.
+                        <p className="mt-7 max-w-[38rem] text-lg leading-relaxed tracking-normal text-white/85 sm:text-xl md:text-[1.1rem] lg:leading-8">
+                            Software developer focused on building clean, responsive web applications with practical
+                            backend systems, thoughtful interfaces, and reliable database-driven features.
                         </p>
                     </div>
 
                     <div className="mt-7 flex flex-wrap gap-3">
-                        {heroPills.map((pill) => (
+                        {heroPills.map(pill => (
                             <span
                                 key={pill}
-                                className="rounded-full border border-white/12 bg-white/[0.06] px-4 py-2 text-sm text-white/80 backdrop-blur-md"
+                                className="rounded-full border border-white/12 bg-white/[0.06] px-4 py-2 text-sm text-white/85 backdrop-blur-md"
                             >
                                 {pill}
                             </span>
@@ -93,7 +80,7 @@ export default function HeroSection({
                     <div className="mt-10 flex flex-wrap items-center gap-4">
                         <button
                             onClick={onViewProjects}
-                            className="group relative overflow-hidden rounded-2xl bg-lime-400 px-8 py-4 text-sm font-black tracking-wider text-black shadow-lg shadow-lime-400/35 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
+                            className="group relative overflow-hidden rounded-2xl bg-lime-400 px-8 py-4 text-sm font-600 tracking-wider text-black shadow-lg shadow-lime-400/35 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
                         >
                             <span className="relative z-10 inline-flex items-center gap-2">
                                 VIEW PROJECTS
@@ -105,14 +92,14 @@ export default function HeroSection({
                         <a
                             href={resumePdf}
                             download
-                            className="group inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/[0.03] px-8 py-4 text-sm font-black tracking-wider text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/10"
+                            className="group inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/[0.03] px-8 py-4 text-sm font-600 tracking-wider text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/10"
                         >
                             <Download className="h-4 w-4" />
                             DOWNLOAD CV
                         </a>
                     </div>
 
-                    <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-white/60">
+                    <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-white/70">
                         <div className="flex items-center gap-3">
                             <span className="h-2 w-2 rounded-full bg-lime-400 shadow-[0_0_20px_rgba(163,230,53,0.9)]" />
                             Available for full-time jobs, internships, and freelance work
@@ -121,8 +108,9 @@ export default function HeroSection({
                 </div>
 
                 <aside
-                    className={`relative mx-auto w-full max-w-[460px] transition-all duration-1000 delay-200 lg:max-w-[480px] xl:max-w-[500px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-                        }`}
+                    className={`relative mx-auto w-full max-w-[460px] transition-all duration-1000 delay-200 lg:max-w-[480px] xl:max-w-[500px] ${
+                        isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+                    }`}
                 >
                     <div
                         className="hero-card-shell relative"
@@ -179,21 +167,15 @@ export default function HeroSection({
                                                         className="hero-tech-badge-glow"
                                                         style={{ backgroundColor: color }}
                                                     />
-                                                    <div
-                                                        className="hero-tech-badge-inner"
-                                                        style={{ color }}
-                                                    >
+                                                    <div className="hero-tech-badge-inner" style={{ color }}>
                                                         {createElement(icon, {
-                                                            className:
-                                                                'h-4 w-4 sm:h-[18px] sm:w-[18px]',
+                                                            className: 'h-4 w-4 sm:h-[18px] sm:w-[18px]',
                                                         })}
                                                         <span className="sr-only">{label}</span>
                                                     </div>
-                                                    <span className="hero-tech-badge-label">
-                                                        {label}
-                                                    </span>
+                                                    <span className="hero-tech-badge-label">{label}</span>
                                                 </div>
-                                            ),
+                                            )
                                         )}
                                     </div>
                                     <div className="relative overflow-hidden rounded-full border-4 border-lime-400/90 p-1 shadow-[0_0_40px_rgba(163,230,53,0.24)]">
