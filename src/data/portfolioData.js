@@ -16,12 +16,11 @@ import {
 import profile from '../assets/visal.png';
 import coffeeShop from '../assets/coffee-pic.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
-import educationPhoto from '../assets/Me.jpg';
 import library from '../assets/Library.png';
 import resumePdf from '../assets/Chun Rattnakvisal.pdf';
 import school from '../assets/school.png';
 
-export { educationPhoto, profile, resumePdf };
+export { profile, resumePdf };
 
 export const navigationItems = [
     {

@@ -1,5 +1,5 @@
 import { BookOpenCheck, CalendarDays, GraduationCap } from 'lucide-react';
-import { education, educationPhoto } from '../../data/portfolioData';
+import { education } from '../../data/portfolioData';
 
 export default function EducationSection({ visibleElements }) {
     return (
@@ -34,20 +34,6 @@ export default function EducationSection({ visibleElements }) {
                         <br />
                         JOURNEY
                     </h2>
-
-                    <div
-                        className={`mt-10 overflow-hidden border border-lime-400/40 bg-white/[0.04] p-3 shadow-[10px_10px_0_rgba(163,230,53,0.18)] transition-all duration-1000 delay-300 ${
-                            visibleElements.has('education-title')
-                                ? 'translate-y-0 opacity-100'
-                                : 'translate-y-12 opacity-0'
-                        }`}
-                    >
-                        <img
-                            src={educationPhoto}
-                            alt="Chun Rattnakvisal"
-                            className="aspect-[4/5] w-full object-cover"
-                        />
-                    </div>
                 </div>
 
                 <div className="space-y-6">
