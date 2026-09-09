@@ -1,74 +1,24 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+
+const email = 'rattnakvisalchun@gmail.com';
 
 export default function ContactSection({ visibleElements }) {
     return (
-        <section id="contact-section" className="relative overflow-hidden bg-black py-32 text-white">
-            <div className="absolute inset-0 opacity-10">
-                <div
-                    className="absolute top-0 left-0 h-full w-full"
-                    style={{
-                        backgroundImage:
-                            'repeating-linear-gradient(45deg, transparent, transparent 35px, #a3e635 35px, #a3e635 37px)',
-                    }}
-                />
-            </div>
-
-            <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-                <h2
-                    data-animate-id="contact-title"
-                    className={`mb-8 text-7xl leading-none tracking-tighter transition-all duration-1000 md:text-8xl ${
-                        visibleElements.has('contact-title') ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-                    }`}
-                >
-                    LET'S BUILD
-                    <br />
-                    SOMETHING
-                    <br />
-                    AMAZING
-                </h2>
-
-                <p
-                    data-animate-id="contact-subtitle"
-                    className={`mb-12 text-xl leading-relaxed transition-all duration-1000 delay-300 md:text-2xl text-white/90 ${
-                        visibleElements.has('contact-subtitle')
-                            ? 'translate-y-0 opacity-100'
-                            : 'translate-y-10 opacity-0'
-                    }`}
-                >
-                    Open to freelance projects, collaborations, and full-time opportunities
-                </p>
-
-                <div
-                    data-animate-id="contact-buttons"
-                    className={`mb-12 flex flex-wrap justify-center gap-6 transition-all duration-1000 delay-500 ${
-                        visibleElements.has('contact-buttons')
-                            ? 'translate-y-0 opacity-100'
-                            : 'translate-y-10 opacity-0'
-                    }`}
-                >
-                    <a
-                        href="mailto:your.rattnakvisalchun@gmail.com"
-                        className="flex items-center gap-2 bg-lime-400 px-8 py-4 text-sm font-black tracking-wider text-black shadow-xl transition-all duration-300 hover:scale-105 hover:bg-lime-300"
-                    >
-                        <Mail className="h-5 w-5" />
-                        EMAIL ME
-                    </a>
-                    <a
-                        href="https://github.com/Rattnakvisal"
-                        className="flex items-center gap-2 border-4 border-lime-400 px-8 py-4 text-sm font-black tracking-wider text-white transition-all duration-300 hover:scale-105 hover:bg-lime-400 hover:text-black"
-                    >
-                        <Github className="h-5 w-5" />
-                        GITHUB
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/chun-rattnakvisal-3a24a0361/"
-                        className="flex items-center gap-2 border-4 border-lime-400 px-8 py-4 text-sm font-black tracking-wider text-white transition-all duration-300 hover:scale-105 hover:bg-lime-400 hover:text-black"
-                    >
-                        <Linkedin className="h-5 w-5" />
-                        LINKEDIN
-                    </a>
+        <footer id="contact-section" className="contact-section">
+            <div className={`contact-inner reveal ${visibleElements.has('contact-title') ? 'visible' : ''}`} data-animate-id="contact-title">
+                <p className="contact-kicker">Have a project or opportunity?</p>
+                <h2>Let’s make<br /><em>something great.</em></h2>
+                <a className="contact-email" href={`mailto:${email}`}>{email}<ArrowUpRight /></a>
+                <div className="contact-bottom">
+                    <p>© {new Date().getFullYear()} Chun Rattnakvisal</p>
+                    <p>Designed &amp; built with care in Phnom Penh.</p>
+                    <div>
+                        <a href="https://github.com/Rattnakvisal" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={19} /></a>
+                        <a href="https://www.linkedin.com/in/chun-rattnakvisal-3a24a0361/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={19} /></a>
+                        <a href={`mailto:${email}`} aria-label="Email"><Mail size={19} /></a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 }

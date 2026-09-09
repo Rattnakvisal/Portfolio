@@ -17,7 +17,8 @@ import profile from '../assets/visal.png';
 import coffeeShop from '../assets/coffee-pic.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
 import library from '../assets/Library.png';
-import resumePdf from '../assets/Chun Rattnakvisal.pdf';
+import resumePdf from '../assets/Mr. Chun Rattnakvisal.pdf';
+import aubCertificatePdf from '../assets/AUB-Certificte_C0000224.pdf';
 import school from '../assets/school.png';
 
 export { profile, resumePdf };
@@ -189,15 +190,17 @@ export const cardTechIcons = [
 export const projects = [
     {
         title: 'E-Commerce Shoes Platform',
+        type: 'Full-stack commerce',
         description:
             'Full-stack e-commerce system with product management, cart, checkout, order tracking, and role-based admin panel.',
         tech: ['PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Vite'],
         link: 'https://github.com/Rattnakvisal/E-commerce-shoes',
         image: ecommerceShoes,
-        color: '#00ff88',
+        color: '#f3532f',
     },
     {
         title: 'School Management System',
+        type: 'Education platform',
         description:
             'CRUD web app for managing students with validation, search/filter, and clean MVC structure using Laravel.',
         tech: [
@@ -205,33 +208,35 @@ export const projects = [
             'PHP',
             'MySQL',
             'Bootstrap',
-            'tailwind CSS',
-            'Javascript',
+            'Tailwind CSS',
+            'JavaScript',
             'SQL Design',
             'Docker',
             'Telegram-OTP',
         ],
         link: 'https://github.com/Rattnakvisal/School-Management-System',
         image: school,
-        color: '#00aaff',
+        color: '#2878e5',
     },
     {
         title: 'Library Management System',
+        type: 'Internship project',
         description:
-            'Database-driven system for books, authors, borrowing/return, fines calculation, and reservation workflow.',
-        tech: ['ASP.NET', 'C#', 'Microsoft SQL Server', 'Jquery', 'SQL Design'],
+            'Built during my internship at ACLEDA University of Business to manage books, authors, borrowing and returns, fines, and reservations.',
+        tech: ['ASP.NET', 'C#', 'Microsoft SQL Server', 'jQuery', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Library-Management-System',
         image: library,
-        color: '#ffaa00',
+        color: '#7957d5',
     },
     {
         title: 'Coffee Shop',
+        type: 'Point of sale & admin',
         description:
             'A coffee shop website with menu, ordering system, and admin dashboard for managing products and orders.',
         tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker', 'SQL Design'],
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
-        color: '#ff5500',
+        color: '#b7673b',
     },
 ];
 
@@ -254,17 +259,22 @@ export const education = [
         school: 'ACLEDA University of Business',
         period: '2023 - Present',
         highlights: ['Bachelor of Business Information Technology'],
+        certificate: {
+            label: 'View AUB Certificate',
+            file: aubCertificatePdf,
+        },
     },
 ];
 
 export const experiences = [
     {
         role: 'Software Developer Intern',
-        organization: 'ACLEDA University of Business and Education',
+        organization: 'ACLEDA University of Business',
         period: '2025 - 2026',
         description:
-            'Contributed to responsive, database-driven web interfaces and backend features during a software development internship.',
+            'Built a responsive, database-driven Library Management System during a software development internship.',
         highlights: [
+            'Developed the Library Management System for books, members, borrowing, returns, fines, and reservations.',
             'Developed ASP.NET Core MVC interfaces with clean data flows and responsive layouts.',
             'Built interactive frontend features using JavaScript and jQuery.',
             'Used Git and GitHub for version control and team collaboration.',
@@ -304,7 +314,7 @@ export const experiences = [
 export const skills = [
     {
         category: 'Frontend Development',
-        items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS', 'Bootstrap'],
+        items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Flutter', 'Tailwind CSS', 'Bootstrap'],
         icon: Palette,
     },
     {
@@ -313,6 +323,7 @@ export const skills = [
             'PHP',
             'C#',
             'Laravel Framework',
+            'Spring Boot',
             'ASP.NET Core',
             'RESTful API',
             'Authentication',
@@ -330,13 +341,13 @@ export const skills = [
             'PDO (PHP Data Objects)',
             'Database Design',
             'Query Optimization',
-            'Store Procedures',
+            'Stored Procedures',
         ],
         icon: Database,
     },
     {
         category: 'Tools & DevOps',
-        items: ['Git & GitHub', 'XAMPP', 'Composer', 'Vite', 'Docker', 'Figma ', 'Postman '],
+        items: ['Git & GitHub', 'XAMPP', 'Composer', 'Vite', 'Docker', 'Figma', 'Postman'],
         icon: Rocket,
     },
 ];

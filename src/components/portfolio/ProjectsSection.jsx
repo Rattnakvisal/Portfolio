@@ -1,99 +1,50 @@
-import { ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CodeXml } from 'lucide-react';
 import { projects } from '../../data/portfolioData';
 
-export default function ProjectsSection({ onPreviewProject, visibleElements }) {
+function ProjectCard({ index, project }) {
     return (
-        <section id="projects-section" className="relative overflow-hidden bg-black py-32 text-white">
-            <div className="absolute top-0 right-0 h-full w-1/3 bg-lime-400/5" />
-            <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-gradient-to-tr from-lime-400/10 to-transparent blur-3xl" />
-
-            <div className="relative z-10 mx-auto max-w-7xl px-6">
-                <div className="mb-20" data-animate-id="projects-title">
-                    <div
-                        className={`mb-6 inline-block border-4 border-lime-400 px-6 py-3 text-lg font-black tracking-wider text-lime-300 transition-all duration-1000 ${
-                            visibleElements.has('projects-title')
-                                ? 'rotate-[2deg] opacity-100'
-                                : 'rotate-[12deg] opacity-0'
-                        }`}
-                    >
-                        SELECTED WORK
-                    </div>
-                    <h2
-                        className={`text-6xl leading-none tracking-tighter transition-all duration-1000 delay-200 md:text-7xl ${
-                            visibleElements.has('projects-title')
-                                ? 'translate-x-0 opacity-100'
-                                : '-translate-x-20 opacity-0'
-                        }`}
-                    >
-                        FEATURED
-                        <br />
-                        PROJECTS
-                    </h2>
+        <article className="project-card" style={{ '--project-accent': project.color }}>
+            <a
+                className="project-image"
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View ${project.title} on GitHub`}
+            >
+                <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
+                <span className="project-index">Featured / 0{index + 1}</span>
+                <span className="project-view" aria-hidden="true"><ArrowUpRight size={22} /></span>
+            </a>
+            <div className="project-info">
+                <div className="project-meta">
+                    <p className="project-type"><CodeXml size={14} /> {project.type}</p>
+                    <span>2025—26</span>
                 </div>
-
-                <div className="grid gap-8 md:grid-cols-2">
-                    {projects.map((project, index) => (
-                        <article
-                            key={project.title}
-                            data-animate-id={`project-${index}`}
-                            className={`group relative overflow-hidden bg-black p-8 text-white transition-all duration-700 hover:scale-[1.02] ${
-                                visibleElements.has(`project-${index}`)
-                                    ? 'translate-y-0 opacity-100'
-                                    : 'translate-y-20 opacity-0'
-                            }`}
-                            style={{
-                                transitionDelay: `${index * 150}ms`,
-                                boxShadow: `8px 8px 0 ${project.color}40`,
-                            }}
-                        >
-                            <div
-                                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-10"
-                                style={{ backgroundColor: project.color }}
-                            />
-
-                            <div className="relative z-10">
-                                <div className="mb-6 flex items-start justify-between">
-                                    <h3 className="text-3xl tracking-tight">{project.title}</h3>
-                                    <ExternalLink
-                                        className="h-6 w-6 transition-transform duration-300 group-hover:rotate-45"
-                                        style={{ color: project.color }}
-                                    />
-                                </div>
-
-                                <p className="mb-6 leading-relaxed text-gray-300 text-base">{project.description}</p>
-
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tech.map(tech => (
-                                        <span
-                                            key={tech}
-                                            className="border-2 px-3 py-1 text-xs tracking-wider"
-                                            style={{
-                                                borderColor: project.color,
-                                                color: project.color,
-                                            }}
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <div className="mt-6 flex gap-3">
-                                    <button
-                                        onClick={() => window.open(project.link, '_blank')}
-                                        className="rounded-md bg-white px-4 py-2 text-sm font-600 text-black transition hover:opacity-90"
-                                    >
-                                        Visit
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div
-                                className="absolute -right-10 -bottom-10 h-32 w-32 rotate-45 opacity-20 transition-all duration-700 group-hover:rotate-90 group-hover:scale-150"
-                                style={{ backgroundColor: project.color }}
-                            />
-                        </article>
-                    ))}
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tag-list">
+                    {project.tech.map((tech) => <span key={tech}>{tech}</span>)}
                 </div>
+                <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
+                    View on GitHub <ArrowRight size={17} />
+                </a>
+            </div>
+        </article>
+    );
+}
+
+export default function ProjectsSection({ visibleElements }) {
+    const isVisible = visibleElements.has('projects-title');
+
+    return (
+        <section id="projects-section" className="section projects-section">
+            <div className={`section-heading reveal ${isVisible ? 'visible' : ''}`} data-animate-id="projects-title">
+                <div><span className="section-number">01</span><span className="section-kicker">Selected work</span></div>
+                <h2>Projects built for<br /><em>real-world use.</em></h2>
+                <p>A selection of full-stack products where I worked across interface design, business logic, databases, and deployment-ready structure.</p>
+            </div>
+            <div className={`project-grid reveal ${isVisible ? 'visible' : ''}`}>
+                {projects.map((project, index) => <ProjectCard key={project.title} index={index} project={project} />)}
             </div>
         </section>
     );
