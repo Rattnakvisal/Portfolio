@@ -14,12 +14,12 @@ import {
     SiTypescript,
 } from 'react-icons/si';
 import profile from '../assets/visal.png';
-import coffeeShop from '../assets/coffee-pic.png';
+import coffeeShop from '../assets/Purr’s Coffee Management Showcase.png';
 import ecommerceShoes from '../assets/E-commerce-shoes.png';
 import library from '../assets/Library.png';
 import resumePdf from '../assets/Mr. Chun Rattnakvisal.pdf';
 import aubCertificatePdf from '../assets/AUB-Certificte_C0000224.pdf';
-import school from '../assets/school.png';
+import school from '../assets/schooli_portfolio_showcase.png';
 
 export { profile, resumePdf };
 
