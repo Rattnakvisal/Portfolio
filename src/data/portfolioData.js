@@ -197,6 +197,17 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/E-commerce-shoes',
         image: ecommerceShoes,
         color: '#f3532f',
+        caseStudy: {
+            context: 'Full-stack commerce',
+            focus: 'Shopping & order management',
+            overview: 'An online shoe store that connects the customer shopping journey with the tools needed to manage products and orders.',
+            features: [
+                { title: 'Product management', description: 'Manage the products available in the storefront.' },
+                { title: 'Cart & checkout', description: 'Move from selected products to an order through a dedicated checkout flow.' },
+                { title: 'Order tracking', description: 'Keep order information available after checkout.' },
+                { title: 'Role-based administration', description: 'Provide a separate admin panel for managing the store.' },
+            ],
+        },
     },
     {
         title: 'School Management System',
@@ -217,6 +228,17 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/School-Management-System',
         image: school,
         color: '#2878e5',
+        caseStudy: {
+            context: 'Education platform',
+            focus: 'Student records & administration',
+            overview: 'A Laravel application for organizing student records, with validation and search tools that support everyday administrative tasks.',
+            features: [
+                { title: 'Student records', description: 'Create, view, update, and delete student information.' },
+                { title: 'Search & filtering', description: 'Find relevant records without manually scanning the full list.' },
+                { title: 'Input validation', description: 'Check submitted student information before saving changes.' },
+                { title: 'MVC structure', description: 'Organize application behavior across models, views, and controllers.' },
+            ],
+        },
     },
     {
         title: 'Library Management System',
@@ -227,6 +249,17 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/Library-Management-System',
         image: library,
         color: '#7957d5',
+        caseStudy: {
+            context: 'Internship · ACLEDA University of Business',
+            focus: 'Library operations',
+            overview: 'Built during my software development internship at ACLEDA University of Business, this system brings book records and lending workflows into a database-driven application.',
+            features: [
+                { title: 'Books & authors', description: 'Organize the catalog and its author information.' },
+                { title: 'Borrowing & returns', description: 'Manage the lending and return of library books.' },
+                { title: 'Fines & reservations', description: 'Support fine management and book reservations.' },
+                { title: 'Responsive interfaces', description: 'Present library workflows through ASP.NET Core MVC interfaces with JavaScript and jQuery interactions.' },
+            ],
+        },
     },
     {
         title: 'Coffee Shop',
@@ -237,6 +270,17 @@ export const projects = [
         link: 'https://github.com/Rattnakvisal/Coffee',
         image: coffeeShop,
         color: '#b7673b',
+        caseStudy: {
+            context: 'Coffee shop website',
+            focus: 'Menu, ordering & administration',
+            overview: 'A coffee shop website that brings the customer-facing menu and ordering experience together with an admin dashboard for daily management.',
+            features: [
+                { title: 'Digital menu', description: 'Display the coffee shop menu for customers to browse.' },
+                { title: 'Ordering', description: 'Let customers select items and place an order.' },
+                { title: 'Product administration', description: 'Manage products through the admin dashboard.' },
+                { title: 'Order administration', description: 'Bring order management into the same dashboard.' },
+            ],
+        },
     },
 ];
 
@@ -244,7 +288,11 @@ export const education = [
     {
         school: 'Chea Sim Kompong Thmar High School',
         period: '2022 - 2023',
-        highlights: ['High School graduation 2023'],
+        highlights: ['Bacll, 2023'],
+        certificate: {
+            label: 'Verify 2023 Bacll',
+            file: 'https://verify.gov.kh/verify/2a7592311b07f345ab9924e9ce26f323daba484b0c1464471a4757b4e5d35d07?key=71eebab40aace0f0c0bebd50e8bf6fcb1d5fed709567c191a9e008f0bc616d21',
+        },
     },
     {
         school: 'ICT Professional Training Center',
